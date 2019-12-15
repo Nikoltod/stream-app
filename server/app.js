@@ -10,6 +10,7 @@ const appPort = 3000
 const app = express();
 const passport = require('./auth/passport')
 const node_media_server = require('./media_server')
+const thumbnail_generator = require('./cron/thumbnails')
 
 const mongoConnectionString = 'mongodb://127.0.0.1/nodeStream';
 
@@ -43,4 +44,7 @@ app.use('/streams', require('./routes/streams'))
 app.use('/settings', require('./routes/settings'))
 
 app.listen(appPort, () => console.log(`App running on localhost:${appPort}`))
+
 node_media_server.run()
+
+thumbnail_generator.start()

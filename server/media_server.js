@@ -11,10 +11,10 @@ nms.on('prePublish', async (id, StreamPath, args) => {
     User.findOne({stream_key: stream_key}, (err, user) => {
         if (!err) {
             if (!user) {
-                let session = nms.getSession(id)
-                session.reject();
+                let session = nms.getSession(id);
+                session.reject()
             } else {
-                // do cool stuff
+                helpers.generateStreamThumbnail(stream_key)
             }
         }
     })
