@@ -1,12 +1,9 @@
 {
-  "name": "stream-app",
-  "version": "1.0.0",
-  "description": "",
+  "name": "streaming-app",
+  "version": "0.0.1",
+  "description": "Streaming app w/ Node.js, MongoDB and ffmpeg and React",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "author": "Todor Nikolov",
   "license": "ISC",
   "dependencies": {
     "node-media-server": "^2.1.4"
