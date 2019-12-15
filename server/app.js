@@ -9,6 +9,7 @@ const flash = require('connect-flash')
 const appPort = 3000
 const app = express();
 const passport = require('./auth/passport')
+const node_media_server = require('./media_server')
 
 const mongoConnectionString = 'mongodb://127.0.0.1/nodeStream';
 
@@ -38,3 +39,4 @@ app.get('*', middleware.ensureLoggedIn(), (req, res) => {
 })
 
 app.listen(appPort, () => console.log(`App running on localhost:${appPort}`))
+node_media_server.run()
