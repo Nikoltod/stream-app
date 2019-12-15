@@ -8,6 +8,8 @@ const config = require('./config/default')
 const flash = require('connect-flash')
 const appPort = 3000
 const app = express();
+const passport = require('./auth/passport')
+
 const mongoConnectionString = 'mongodb://127.0.0.1/nodeStream';
 
 mongoose.connect(mongoConnectionString, { useNewUrlParser: true })
@@ -19,6 +21,9 @@ app.use(flash())
 app.use(require('cookie-parser')())
 app.use(bodyParse.urlencoded({extended: true}))
 app.use(bodyParse.json({express: true}))
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(Session({
     store: new FileStore({
