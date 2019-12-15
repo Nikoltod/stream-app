@@ -38,5 +38,7 @@ app.get('*', middleware.ensureLoggedIn(), (req, res) => {
     res.render('index')
 })
 
+app.use('/streams', require('./routes/streams'))
+
 app.listen(appPort, () => console.log(`App running on localhost:${appPort}`))
 node_media_server.run()
