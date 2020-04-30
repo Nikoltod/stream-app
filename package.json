@@ -28,7 +28,7 @@
     "ffmpeg": "0.0.4",
     "file-loader": "^5.0.2",
     "history": "^4.10.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mini-css-extract-plugin": "^0.8.0",
     "mongoose": "^5.8.1",
     "node-sass": "^4.13.0",
