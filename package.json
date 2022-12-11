@@ -23,7 +23,7 @@
     "cookie-parser": "^1.4.4",
     "css-loader": "^3.3.2",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.0",
     "ffmpeg": "0.0.4",
     "file-loader": "^5.0.2",
